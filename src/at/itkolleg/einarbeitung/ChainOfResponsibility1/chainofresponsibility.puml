@@ -1,0 +1,21 @@
+```plantuml
+@startuml
+abstract class Handler {
+    # nextHandler : Handler
+    + setNextHandler(nextHandler : Handler)
+    + handleRequest()
+}
+
+class ConcreteHandlerA {
+    + handleRequest()
+}
+
+class ConcreteHandlerB {
+    + handleRequest()
+}
+
+Handler <|-. ConcreteHandlerA
+Handler <|-. ConcreteHandlerB
+
+Handler --> Handler : nextHandler
+@enduml

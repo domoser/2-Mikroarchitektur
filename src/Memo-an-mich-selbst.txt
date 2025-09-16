@@ -1,0 +1,14 @@
+
+ToDo:
+
+BlueJ Buch Klassenentwurf K8 durcharbeiten
+BlueJ Buch Entwurf von Anwendungen K15 durcharbeiten
+
+Entwurfsmuster Theorie durcharbeiten
+
+•	Chain of Responsibility (=Verantwortungskette, Kette von Zuständigkeiten)
+•	TemplateMethod
+•	Decorator
+•	Builder
+•	Adapter
+•	Observer
