@@ -1,19 +1,30 @@
-# Chain of Responsibility (Verantwortungskette bzw. Kette von Zuständigkeiten)
+# Entwurfsmuster
+In diesem Repo sammle ich einige Beispielprojekte zum Thema Entwurfsmuster in Java. Die Projekte werden mit IntelliJ entwickelt und auf GitHub gepusht.
+
+Folgende Entwurfsmuster werden Schritt für Schritt anhand von Beispielen erarbeitet und dokumentiert:
+- Chain of Responsibility
+- TemplateMethod
+- Decorator
+- Builder
+- Adapter
+- Observer
+
+## 1 Chain of Responsibility (Verantwortungskette bzw. Kette von Zuständigkeiten)
 https://www.youtube.com/watch?v=jDX6x8qmjbA&list=PLF206E906175C7E07&index=22&pp=iAQB
 
 Das Muster dient dazu, eine Anfrage durch eine Kette von Bearbeitern (Handlern) zu schicken. Jeder Bearbeiter entscheidet, ob er die Anfrage selbst bearbeiten kann – wenn nicht, gibt er sie an den nächsten in der Kette weiter.
-## 🔧 Ziel: 
+### 🔧 Ziel: 
 Die Sender der Anfrage müssen nicht wissen, welcher Bearbeiter zuständig ist. Dadurch wird der Code flexibler und entkoppelt.
-## 🧠 Typische Einsatzszenarien
+### 🧠 Typische Einsatzszenarien
 - Event-Handling in GUIs (z.B. Tastendruck wird von Komponenten weitergereicht)
 - Logging-Systeme (verschiedene Logger für unterschiedliche Ebenen)
 - Validierung von Formularen (mehrere Prüfregeln nacheinander)
-## 📌 Vorteile
+### 📌 Vorteile
 - Entkopplung von Sender und Empfänger
 - Erweiterbarkeit: Neue Handler können leicht hinzugefügt werden
 - Flexibilität: Reihenfolge der Bearbeiter kann angepasst werden
 
-## UML
+### UML
 PlantUML-Code kann in IntelliJ dargestellt werden, nicht aber die Abbildung direkt in Markdown. Stattdessen muss man den Workaround machen, in dem man mittels einer .puml-Datei die Grafik erzeugt, diese als Bild speichert und anschließend in Markdown einbindet:
 
 ![Chain of Responsibility Diagramm](src/at/itkolleg/einarbeitung/ChainOfResponsibility1/chainofresponsibility.png)
@@ -41,4 +52,4 @@ classDiagram
     Handler --> Handler : nextHandler
 ```
 
-# Template Method
+## 2 Template Method
