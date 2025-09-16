@@ -1,6 +1,4 @@
 
-ToDo:
-
 BlueJ Buch Klassenentwurf K8 durcharbeiten
 BlueJ Buch Entwurf von Anwendungen K15 durcharbeiten
 
