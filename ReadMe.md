@@ -27,7 +27,7 @@ Die Sender der Anfrage müssen nicht wissen, welcher Bearbeiter zuständig ist. 
 ### UML
 PlantUML-Code kann in IntelliJ dargestellt werden, nicht aber die Abbildung direkt in Markdown. Stattdessen muss man den Workaround machen, in dem man mittels einer .puml-Datei die Grafik erzeugt, diese als Bild speichert und anschließend in Markdown einbindet:
 
-![Chain of Responsibility Diagramm](src/at/itkolleg/einarbeitung/ChainOfResponsibility1/chainofresponsibility.png)
+![Chain of Responsibility Diagramm](src/at/itkolleg/andere/ChainOfResponsibility1/chainofresponsibility.png)
 
 
 Mit Mermaid funktioniert es auch in IntelliJ direkt in Markdown integriert:

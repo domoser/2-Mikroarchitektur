@@ -1,4 +1,4 @@
-package at.itkolleg.einarbeitung.ChainOfResponsibility2;
+package at.itkolleg.andere.ChainOfResponsibility2;
 
 public class SubNumbers implements Chain {
     private Chain nextInChain;

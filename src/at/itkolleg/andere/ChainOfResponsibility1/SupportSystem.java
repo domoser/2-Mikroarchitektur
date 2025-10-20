@@ -1,4 +1,4 @@
-package at.itkolleg.einarbeitung.ChainOfResponsibility1;
+package at.itkolleg.andere.ChainOfResponsibility1;
 
 public class SupportSystem {
     public static void main(String[] args) {

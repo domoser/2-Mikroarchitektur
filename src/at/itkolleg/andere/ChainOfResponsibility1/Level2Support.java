@@ -1,4 +1,4 @@
-package at.itkolleg.einarbeitung.ChainOfResponsibility1;
+package at.itkolleg.andere.ChainOfResponsibility1;
 
 /**
  * Konkreter Handler
@@ -11,7 +11,7 @@ public class Level2Support extends SupportHandler {
         } else if (nextHandler != null) {
             nextHandler.handleRequest(difficulty);
         } else {
-            System.out.println("Keine Bearbeiung möglich für Schwierigkeit " + difficulty);
+            System.out.println("Keine Bearbeitung möglich für Schwierigkeit " + difficulty);
         }
     }
 }

@@ -1,4 +1,4 @@
-package at.itkolleg.einarbeitung.ChainOfResponsibility1;
+package at.itkolleg.andere.ChainOfResponsibility1;
 
 /**
  * Abstrakter Handler

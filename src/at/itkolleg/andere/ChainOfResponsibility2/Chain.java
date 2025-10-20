@@ -1,4 +1,4 @@
-package at.itkolleg.einarbeitung.ChainOfResponsibility2;
+package at.itkolleg.andere.ChainOfResponsibility2;
 
 public interface Chain {
 
