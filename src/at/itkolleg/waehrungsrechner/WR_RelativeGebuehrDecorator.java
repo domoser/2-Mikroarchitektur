@@ -7,12 +7,11 @@ public class WR_RelativeGebuehrDecorator extends WR__BaseGebuehrDecorator {
     /**
      * Erzeugt einen neuen Währungsrechner mit zusätzlichem relativen Gebühren-Aufschlag von
      * gebuehr %.
-     * @param nextDecoratedUmrechner auf das Ergebnis der Umrechnung wird der Aufschlag prozentuell hinzugezählt
      * @param nextUmrechner nächster Umrechner im Sinne der Chain of responsibility
      * @param gebuehr Aufschlag in % für den Betrag, der umgerechnet wird.
      */
-    public WR_RelativeGebuehrDecorator(IUmrechnen nextDecoratedUmrechner, IUmrechnen nextUmrechner, double gebuehr) {
-        super(nextDecoratedUmrechner, nextUmrechner);
+    public WR_RelativeGebuehrDecorator(IUmrechnen nextUmrechner, double gebuehr) {
+        super(nextUmrechner);
         this.gebuehr = gebuehr;
     }
 

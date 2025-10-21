@@ -2,12 +2,10 @@ package at.itkolleg.waehrungsrechner;
 
 public abstract class WR__BaseGebuehrDecorator extends WR {
 
-    private IUmrechnen nextDecoratedUmrechner;
     protected double gebuehr;
 
-    public WR__BaseGebuehrDecorator(IUmrechnen nextDecoratedUmrechner, IUmrechnen nextUmrechner) {
+    public WR__BaseGebuehrDecorator(IUmrechnen nextUmrechner) {
         super(nextUmrechner); // nextUmrechner im Sinne des Chain of responsibility patterns
-        this.nextDecoratedUmrechner = nextDecoratedUmrechner;
     }
 
 
@@ -16,7 +14,7 @@ public abstract class WR__BaseGebuehrDecorator extends WR {
         double betragMitGebuehr = berechneBetragMitGebuehr(betrag);
         // Lass den nächsten Decorator evtl. weiter dekorieren
         // oder gib den Betrag mit Gebühren weiter an den nächsten konkreten Umrechner
-        return this.nextDecoratedUmrechner.umrechnen(variante, betragMitGebuehr); // Decorator pattern
+        return this.nextUmrechner.umrechnen(variante, betragMitGebuehr); // Decorator pattern
     }
 
     /**
@@ -32,7 +30,7 @@ public abstract class WR__BaseGebuehrDecorator extends WR {
      */
     @Override
     public double getFaktor() {
-        return this.nextDecoratedUmrechner.getFaktor();
+        return this.nextUmrechner.getFaktor();
     }
 
     /**
@@ -41,6 +39,6 @@ public abstract class WR__BaseGebuehrDecorator extends WR {
      */
     @Override
     public boolean zustaendig(String variante) {
-        return this.nextDecoratedUmrechner.zustaendig(variante);
+        return this.nextUmrechner.zustaendig(variante);
     }
 }

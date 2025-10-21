@@ -7,18 +7,16 @@ package at.itkolleg.waehrungsrechner;
  * Concrete Component im Sinne des Decorator patterns
  */
 public class Umrechner_EUR2YEN extends WR {
+    // Builder pattern
+    protected double faktor = 177.395; // Default-Wert
 
-    public Umrechner_EUR2YEN() {
-        super(null);
-    }
+    public Umrechner_EUR2YEN() {super();}
 
-    public Umrechner_EUR2YEN(IUmrechnen nextUmrechner) {
-        super(nextUmrechner);
-    }
+    public Umrechner_EUR2YEN(IUmrechnen nextUmrechner) { super(nextUmrechner); }
 
     @Override
     public double getFaktor() {
-        return 177.395; // ein Euro entspricht 177.395 japanischen Yen
+        return this.faktor; // ein Euro entspricht 177.395 japanischen Yen
     }
 
     @Override

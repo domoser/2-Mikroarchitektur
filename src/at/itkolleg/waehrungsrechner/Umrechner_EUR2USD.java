@@ -7,18 +7,16 @@ package at.itkolleg.waehrungsrechner;
  * Concrete Component im Sinne des Decorator patterns
  */
 public class Umrechner_EUR2USD extends WR {
+    // Builder pattern
+    protected double faktor = 1.16; // Default-Wert
 
-    public Umrechner_EUR2USD() {
-        super(null);
-    }
+    public Umrechner_EUR2USD() { super(); }
 
-    public Umrechner_EUR2USD(IUmrechnen nextUmrechner) {
-        super(nextUmrechner);
-    }
+    public Umrechner_EUR2USD(IUmrechnen nextUmrechner) { super(nextUmrechner); }
 
     @Override
     public double getFaktor() {
-        return 1.16; // ein Euro entspricht 1.16 US-Dollar
+        return this.faktor; // ein Euro entspricht 1.16 US-Dollar
     }
 
     @Override
